@@ -2714,7 +2714,7 @@ public final class AstBuilder extends AbstractAstBuilder<Object> {
         .build();
   }
 
-  private static boolean isIndentChars(Token token) {
+  public static boolean isIndentChars(Token token) {
     var text = token.getText();
 
     for (var i = 0; i < text.length(); i++) {
@@ -2725,7 +2725,7 @@ public final class AstBuilder extends AbstractAstBuilder<Object> {
     return true;
   }
 
-  private static String getLeadingIndent(Token token) {
+  public static String getLeadingIndent(Token token) {
     var text = token.getText();
 
     for (var i = 0; i < text.length(); i++) {
